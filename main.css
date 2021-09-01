@@ -1,0 +1,48 @@
+body {
+    background-image: url("flir_image.jpeg");
+    background-color: #cccccc;
+    text-align: center;
+    height: 900px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed;
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+#leftDiv {
+    float: left;
+    width: 49%;
+    border: 2px solid black;
+}
+
+#rightDiv {
+    float: right;
+    width: 49%;
+    border: 2px solid black;   
+}
+
+/* #charSelectDiv {
+    display: flex;
+    flex-direction: column;
+} */
+
+.statDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    size: 20pt;
+}
+
+#statTitle {
+    flex: 0 0 19%; 
+    border: 2px dotted black;
+    padding: 0;
+    margin: 0
+}
+
+#statValue {
+    flex: 0 0 19%; 
+    border: 2px dotted black;
+    margin: 0;
+    margin-bottom: 20px;
+}
