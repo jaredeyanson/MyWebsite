@@ -46,14 +46,23 @@ function addModel(e) {
 
   let modelDiv = document.createElement('div')
   let modelname = document.createElement('h1')
+  let modelPoints = document.createElement('h2')
+  let modelLevel = document.createElement('h2')
+
 
   modelDiv.className = 'modelDiv'
   modelname.className = 'charName'
+  modelPoints.className = 'modelPoints'
+  modelLevel.className = 'ModelLevel'
 
   modelname.innerHTML = character.modelName
+  modelLevel.innerHTML = 'Level: ' + character.level
+  modelPoints.innerHTML = 'Points: ' + character.points
 
   totalPntsDiv.appendChild(armyPoints)
   modelDiv.appendChild(modelname)
+  modelDiv.appendChild(modelLevel)
+  modelDiv.appendChild(modelPoints)
   rightDiv.appendChild(modelDiv)
   document.getElementById("armyPoints").innerHTML = totalPoints
 
