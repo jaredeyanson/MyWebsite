@@ -45,7 +45,7 @@ function addModel(e) {
   armyPoints.id = 'armyPoints'
 
   let modelDiv = document.createElement('div')
-  let modelname = document.createElement('h2')
+  let modelname = document.createElement('h1')
 
   modelDiv.className = 'modelDiv'
   modelname.className = 'charName'
