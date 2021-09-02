@@ -78,8 +78,8 @@ function forceDetail(e) {
   for (let i = 0; i < characterInfo.length; i++) {
     let newDiv = document.createElement("div")
     let button = document.createElement("button")
-    let points = document.createElement("h2")
-    let level = document.createElement("h2")
+    let points = document.createElement("h1")
+    let level = document.createElement("h1")
     let statDiv = document.createElement("div")
     document.getElementById(tier).disabled = true
 
@@ -92,14 +92,14 @@ function forceDetail(e) {
     statDiv.className = "statDiv"
 
     for (let h = 0; h < characterInfo[i].stats.length; h++) {
-      let stat = document.createElement('h2')
+      let stat = document.createElement('h1')
       stat.innerHTML = characterInfo[i].stats[h].statAbbr
       stat.id = 'statTitle'
       statDiv.appendChild(stat)
     }
 
     for (let h = 0; h < characterInfo[i].stats.length; h++) {
-      let stat = document.createElement('h2')
+      let stat = document.createElement('h1')
       stat.id = "statValue"
       stat.innerHTML = characterInfo[i].stats[h].statValue
       statDiv.appendChild(stat)
