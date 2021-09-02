@@ -25,8 +25,15 @@ document.body.appendChild(rightDiv)
 let totalPoints = 0
 
 
+
 //add character to army list
 function addModel(e) {
+  function setHTML(element, value){
+    let product = document.createElement(element)
+    product.innerHTML = value
+    //parent.appendChild(product)
+  }
+  
   let character
 
   for (let i = 0; i < data[0].tier.length; i++) {
@@ -48,6 +55,8 @@ function addModel(e) {
   let modelname = document.createElement('h1')
   let modelPoints = document.createElement('h2')
   let modelLevel = document.createElement('h2')
+  let statName = setHTML('h2', character.stats[0].statAbbr)
+
 
 
   modelDiv.className = 'modelDiv'
@@ -63,6 +72,7 @@ function addModel(e) {
   modelDiv.appendChild(modelname)
   modelDiv.appendChild(modelLevel)
   modelDiv.appendChild(modelPoints)
+  modelDiv.appendChild(statName)
   rightDiv.appendChild(modelDiv)
   document.getElementById("armyPoints").innerHTML = totalPoints
 
