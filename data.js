@@ -9,6 +9,7 @@ var data = [
                         modelName: 'Elite Commander/Sergeant Major',
                         level: 12,
                         points: 30,
+                        id: 0,
                         stats: [
                             {
                                 statName: 'Command',
@@ -41,6 +42,7 @@ var data = [
                         modelName: 'Elite Officer/Troop Sergeant',
                         level: 11,
                         points: 25,
+                        id: 0,
                         stats: [
                             {
                                 statName: 'Command',
@@ -73,6 +75,7 @@ var data = [
                         modelName: 'Elite Operator',
                         level: 10,
                         points: 20,
+                        id: 0,
                         stats: [
                             {
                                 statName: 'Command',
