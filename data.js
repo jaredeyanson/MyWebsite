@@ -446,7 +446,111 @@ var data = [
         ]
     },
     {
-        class: 'Weapons'
+        class: 'Weapons',
+        weapons: [
+            {
+                name: 'Unarmed Combat Training',
+                category: 'Close Combat Weapons',
+                points: '',
+                rangeint: 'N/A',
+                lethality: 'N/A',
+                pen: 'N/A',
+                specialRules: [
+                    {
+                        name: 'Close Combat',
+                        desc: '(+1 to Melee roll)'
+                    }
+                ]
+            },
+            {
+                name: 'Close Combat Weapon',
+                category: 'Close Combat Weapons',
+                points: '',
+                rangeint: 'N/A',
+                lethality: 'N/A',
+                pen: 'N/A',
+                specialRules: [
+                    {
+                        name: 'Close Combat',
+                        desc: '(+1 to Melee roll)'
+                    }
+                ]
+            },
+            {
+                name: 'Specialist CCW',
+                category: 'Close Combat Weapons',
+                points: '',
+                rangeint: 'N/A',
+                lethality: 'N/A',
+                pen: 'N/A',
+                specialRules: [
+                    {
+                        name: 'Close Combat',
+                        desc: '(+2 to Melee roll)'
+                    }
+                ]
+            },
+            {
+                name: 'Pistol',
+                category: 'Sidearm',
+                points: '',
+                rangeint: 8,
+                lethality: '5+',
+                pen: 4,
+                specialRules: [
+                    {
+                        name: 'Compact',
+                        desc: '(+1 in 1st RI)'
+                    },
+                    {
+                        name: 'Rapid Fire',
+                        desc: '(1 shot, or 2 at -1)'
+                    }
+                ]
+            },
+            {
+                name: 'Pistol',
+                category: 'Sidearm',
+                points: '',
+                rangeint: 6,
+                lethality: '5+',
+                pen: 4,
+                specialRules: [
+                    {
+                        name: 'Compact',
+                        desc: '(+1 in 1st RI)'
+                    },
+                    {
+                        name: 'Suppressed',
+                        desc: ''
+                    }
+                ]
+            },
+            {
+                name: 'Heavy Pistol',
+                category: 'Sidearm',
+                points: '',
+                rangeint: 6,
+                lethality: '3+',
+                pen: 4,
+                specialRules: [
+                    {
+                        name: 'Compact',
+                        desc: '(+1 in 1st RI)'
+                    },
+                    {
+                        name: 'Breaching',
+                        desc: '(+1 on Breaching Roll)'
+                    }
+                ]
+            }
+        ],
+        specialRules: [
+            {
+                rule: '',
+                desc: ''
+            }
+        ]
     },
     {
         class: 'Equipment'

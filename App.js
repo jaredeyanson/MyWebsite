@@ -28,8 +28,8 @@ let totalPoints = 0
 
 //add character to army list
 function addModel(e) {
-  
-  
+
+
   let character
 
   for (let i = 0; i < data[0].tier.length; i++) {
@@ -80,7 +80,7 @@ function addModel(e) {
   modelPoints.className = 'modelPoints'
   modelLevel.className = 'ModelLevel'
   pointsDiv.className = 'pointsDiv'
-  
+
 
 
   modelname.innerHTML = character.modelName
@@ -104,6 +104,8 @@ function addModel(e) {
 
 //present character options to user
 function forceDetail(e) {
+  //document.getElementById('charSelectDiv').innerHTML = ''
+  // document.getElementById('charDiv').innerHTML = ''
   let characterInfo
   let tier
   for (let i = 0; i < data[0].tier.length; i++) {
@@ -117,13 +119,17 @@ function forceDetail(e) {
 
   charDiv.id = 'charDiv'
 
+  //$("#charDiv").load("#charDiv .reloaded-divs > *");
+  //document.getElementById('charDiv').load('charDiv')
+  //load("index.html", document.getElementById("charDiv"))
+
   for (let i = 0; i < characterInfo.length; i++) {
     let newDiv = document.createElement("div")
     let button = document.createElement("button")
     let points = document.createElement("h1")
     let level = document.createElement("h1")
     let statDiv = document.createElement("div")
-    document.getElementById(tier).disabled = true
+    //document.getElementById(tier).disabled = true
 
     button.innerHTML = characterInfo[i].modelName
     button.id = characterInfo[i].modelName
@@ -149,13 +155,20 @@ function forceDetail(e) {
 
 
 
-    charSelectDiv.appendChild(button)
-    charSelectDiv.appendChild(level)
-    charSelectDiv.appendChild(points)
-    charSelectDiv.appendChild(newDiv)
-    charSelectDiv.appendChild(statDiv)
+    charDiv.appendChild(button)
+    charDiv.appendChild(level)
+    charDiv.appendChild(points)
+    charDiv.appendChild(newDiv)
+    charDiv.appendChild(statDiv)
+    //charSelectDiv.appendChild(charDiv)
+    //document.getElementById('charSelectDiv').innerHTML = charSelectDiv
+    
+    document.getElementById('charSelectDiv').innerHTML = ''
     charSelectDiv.appendChild(charDiv)
+    //document.getElementById('charSelectDiv').innerHTML = charDiv
     document.getElementById(characterInfo[i].modelName).addEventListener("click", addModel);
+    
+
   }
 }
 

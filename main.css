@@ -14,11 +14,13 @@ body {
     float: left;
     width: 49%;
     border: 2px solid black;
+    position: fixed;
 }
 
 #leftDiv:hover {
     background-color: gray;
     opacity: .8;
+    width: 49%
 }
 
 #rightDiv {
