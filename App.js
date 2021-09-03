@@ -28,22 +28,37 @@ let totalPoints = 0
 
 //add character to army list
 function addModel(e) {
-  function setHTML(element, value){
-    let product = document.createElement(element)
-    product.innerHTML = value
-    //parent.appendChild(product)
-  }
+  
   
   let character
 
   for (let i = 0; i < data[0].tier.length; i++) {
-    console.log('loop')
+    //console.log('loop')
     for (let j = 0; j < data[0].tier[i].model.length; j++) {
       if (e.srcElement.innerHTML === data[0].tier[i].model[j].modelName) {
         character = data[0].tier[i].model[j]
       }
     }
   }
+
+  let statDiv = document.createElement('div')
+  statDiv.className = 'statDiv'
+
+
+  for (let h = 0; h < character.stats.length; h++) {
+    let stat = document.createElement('h2')
+    stat.innerHTML = character.stats[h].statAbbr
+    stat.id = 'statTitle'
+    statDiv.appendChild(stat)
+  }
+
+  for (let h = 0; h < character.stats.length; h++) {
+    let stat = document.createElement('h2')
+    stat.id = "statValue"
+    stat.innerHTML = character.stats[h].statValue
+    statDiv.appendChild(stat)
+  }
+
   console.log(character)
 
   totalPoints = totalPoints + character.points
@@ -55,28 +70,36 @@ function addModel(e) {
   let modelname = document.createElement('h1')
   let modelPoints = document.createElement('h2')
   let modelLevel = document.createElement('h2')
-  let statName = setHTML('h2', character.stats[0].statAbbr)
-
-
+  let weapButton = document.createElement('button')
+  let equipButton = document.createElement('button')
+  let charBtnDiv = document.createElement('div')
+  let pointsDiv = document.createElement('div')
 
   modelDiv.className = 'modelDiv'
   modelname.className = 'charName'
   modelPoints.className = 'modelPoints'
   modelLevel.className = 'ModelLevel'
+  pointsDiv.className = 'pointsDiv'
+  
+
 
   modelname.innerHTML = character.modelName
   modelLevel.innerHTML = 'Level: ' + character.level
   modelPoints.innerHTML = 'Points: ' + character.points
+  weapButton.innerHTML = 'Add Weapon'
+  equipButton.innerHTML = 'Add Equipment'
 
+  charBtnDiv.appendChild(weapButton)
+  charBtnDiv.appendChild(equipButton)
   totalPntsDiv.appendChild(armyPoints)
   modelDiv.appendChild(modelname)
-  modelDiv.appendChild(modelLevel)
-  modelDiv.appendChild(modelPoints)
-  modelDiv.appendChild(statName)
+  pointsDiv.appendChild(modelLevel)
+  pointsDiv.appendChild(modelPoints)
+  modelDiv.appendChild(charBtnDiv)
+  modelDiv.appendChild(pointsDiv)
+  modelDiv.appendChild(statDiv)
   rightDiv.appendChild(modelDiv)
-  document.getElementById("armyPoints").innerHTML = totalPoints
-
-
+  document.getElementById("armyPoints").innerHTML = 'Total Army Points:   ' + totalPoints
 }
 
 //present character options to user

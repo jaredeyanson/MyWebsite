@@ -3,21 +3,17 @@ body {
     background-color: white;
     text-align: center;
     height: 1080px;
-    /* width: 1080px; You must set a specified height */
-    /* background-size: 900px; */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: center;
     background-attachment: fixed;
     background-size: contain;
-    /* opacity: .5; */
 }
 
 #leftDiv {
     float: left;
     width: 49%;
     border: 2px solid black;
-    opacity: .8;
 }
 
 #leftDiv:hover {
@@ -28,25 +24,21 @@ body {
 #rightDiv {
     float: right;
     width: 49%;
-    border: 2px solid black;   
+    border: 2px solid black; 
+    /* display: flex;   */
 }
 
 #rightDiv:hover{
     background-color: gray;
     opacity: .8;
+    
 }
-
-/* #charSelectDiv {
-    display: flex;
-    flex-direction: column;
-} */
 
 .statDiv {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     size: 20pt;
-    /* background-color: gray ; */
 }
 
 #statTitle {
@@ -61,4 +53,18 @@ body {
     border: 2px dotted black;
     margin: 0;
     margin-bottom: 20px;
+}
+
+#armyPoints {
+    flex: 0 0 100%;
+    flex-direction: row
+}
+
+.modelDiv {
+    border: 2px solid black
+}
+
+.pointsDiv {
+    float: left;
+    margin-right: 20px
 }
