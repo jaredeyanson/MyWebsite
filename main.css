@@ -70,3 +70,16 @@ body {
     float: left;
     margin-right: 20px
 }
+
+.wpnDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.wpnStat {
+    flex: 0 0 15%; 
+    border: 2px dotted black;
+    margin: 0;
+    margin-bottom: 20px;
+}

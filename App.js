@@ -32,7 +32,48 @@ function addWeapon(e){
   id = id.replace('wpnBtn', '')
   document.getElementById('charSelectDiv').innerHTML = ''
 
+  let wpnDiv = document.createElement('div')
+  let spcRls = document.createElement('div')
 
+  wpnDiv.className = 'wpnDiv'
+  
+  for (let i = 0; i < data[1].weapons.length; i++){
+
+    let wpnClass = document.createElement('p')
+    let wpnName = document.createElement('p')
+    let wpnPts = document.createElement('p')
+    let wpnRngInt = document.createElement('p')
+    let wpnLeth = document.createElement('p')
+    let wpnPen = document.createElement('p')
+    //let wpnSR = document.createElement('p')
+
+
+    wpnClass.innerHTML = data[1].weapons[i].category
+    wpnClass.className = 'wpnStat'
+    wpnName.innerHTML = data[1].weapons[i].name
+    wpnName.className = 'wpnStat'
+    wpnPts.innerHTML = data[1].weapons[i].points
+    wpnPts.className = 'wpnStat'
+    wpnRngInt.innerHTML = data[1].weapons[i].rangeint
+    wpnRngInt.className = 'wpnStat'
+    wpnLeth.innerHTML = data[1].weapons[i].lethality
+    wpnLeth.className = 'wpnStat'
+    wpnPen.innerHTML = data[1].weapons[i].pen
+    wpnPen.className = 'wpnStat'
+
+    
+    wpnDiv.appendChild(wpnClass)
+    wpnDiv.appendChild(wpnName)
+    wpnDiv.appendChild(wpnPts)
+    wpnDiv.appendChild(wpnRngInt)
+    wpnDiv.appendChild(wpnLeth)
+    wpnDiv.appendChild(wpnPen)
+
+    console.log(data[1].weapons[i].category)
+  }
+
+
+  document.getElementById('charSelectDiv').appendChild(wpnDiv)
   // function forceDetail(e) {
   //   //document.getElementById('charSelectDiv').innerHTML = ''
   //   // document.getElementById('charDiv').innerHTML = ''
