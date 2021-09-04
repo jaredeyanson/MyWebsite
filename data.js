@@ -547,7 +547,7 @@ var data = [
             {
                 name: 'Machine Pistol',
                 category: 'Sub-Machine Gun',
-                points: 'N/A',
+                points: 4,
                 rangeint: 8,
                 lethality: '5+',
                 pen: 4,
@@ -565,7 +565,7 @@ var data = [
             {
                 name: 'Sub-Machine Gun',
                 category: 'Sub-Machine Gun',
-                points: 'N/A',
+                points: 5,
                 rangeint: 10,
                 lethality: '5+',
                 pen: 4,
@@ -583,7 +583,7 @@ var data = [
             {
                 name: 'Sawn off, Under barrel Shotgun',
                 category: 'Shotguns',
-                points: 'N/A',
+                points: 2,
                 rangeint: 4,
                 lethality: '3+',
                 pen: 4,
@@ -946,46 +946,106 @@ var data = [
             },
             {
                 name: 'Under Barrel Grenade launcher',
-                category: '',
+                category: 'Grenade Launchers',
                 points: 5,
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                rangeint: 12,
+                lethality: '5+',
+                pen: 5,
                 specialRules: [
-                    
+                    {
+                        name: 'Frag 3"',
+                        desc: '1" inner kill zone'
+                    },
+                    {
+                        name: 'Smoke 2"',
+                        desc: ''
+                    },
+                    {
+                        name: 'Minimum Range 6"',
+                        desc: ''
+                    },
+                    {
+                        name: 'Other',
+                        desc: 'removed the Compact rule from the weapon it is attached to'
+                    }
                 ]
             },
             {
-                name: 'Single Shot ',
-                category: '',
-                points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                name: 'Pirate Gun',
+                category: 'Grenade Launchers',
+                points: 6,
+                rangeint: 14,
+                lethality: '5+',
+                pen: 5,
                 specialRules: [
-                    
+                    {
+                        name: 'Frag 3"',
+                        desc: '1" inner kill zone'
+                    },
+                    {
+                        name: 'Smoke 2"',
+                        desc: ''
+                    },
+                    {
+                        name: 'Minimum Range 6"',
+                        desc: ''
+                    },
+                    {
+                        name: 'Compact',
+                        desc: '+1 in 1st RI'
+                    }
                 ]
             },
             {
-                name: '',
-                category: '',
-                points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                name: 'Multiple Grenade Launcher',
+                category: 'Grenade Launchers',
+                points: 15,
+                rangeint: 14,
+                lethality: '5+',
+                pen: 5,
                 specialRules: [
-                    
+                    {
+                        name: 'Multi Burst (2)',
+                        desc: ''
+                    },
+                    {
+                        name: 'Frag 3"',
+                        desc: '1" inner kill zone'
+                    },
+                    {
+                        name: 'Smoke 2"',
+                        desc: ''
+                    },
+                    {
+                        name: 'Minimum Range 6"',
+                        desc: ''
+                    },
+                    {
+                        name: 'Other',
+                        desc: 'firer nominated ammo fired'
+                    }
                 ]
             },
             {
-                name: '',
-                category: '',
-                points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                name: 'Air Burst Grenade Launcher',
+                category: 'Grenade Launchers',
+                points: 20,
+                rangeint: 18,
+                lethality: '5+',
+                pen: 5,
                 specialRules: [
-                    
+                    {
+                        name: 'Frag 2"',
+                        desc: '1" inner kill zone'
+                    },
+                    {
+                        name: 'Airburst',
+                        desc: 'ignores cover'
+                    },
+                    {
+                        name: 'Minimum Range 6"',
+                        desc: ''
+                    }
                 ]
             },
             {
