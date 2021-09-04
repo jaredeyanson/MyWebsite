@@ -26,41 +26,43 @@ document.body.appendChild(rightDiv)
 
 //Set points counter value to 0
 let totalPoints = 0
-function addWpn(e, wpn, id){
-  console.log(e)
-  console.log(wpn)
-  console.log(id)
+function addWpn(e, wpn, id) {
 
   let wpnDiv = document.createElement('div')
-    let wpnClass = document.createElement('p')
-    let wpnName = document.createElement('p')
-    let wpnPts = document.createElement('p')
-    let wpnRngInt = document.createElement('p')
-    let wpnLeth = document.createElement('p')
-    let wpnPen = document.createElement('p')
+  let wpnClass = document.createElement('p')
+  let wpnName = document.createElement('p')
+  let wpnPts = document.createElement('p')
+  let wpnRngInt = document.createElement('p')
+  let wpnLeth = document.createElement('p')
+  let wpnPen = document.createElement('p')
 
-    wpnDiv.className = 'wpnDiv'
-    wpnClass.innerHTML = wpn.category
-    wpnClass.className = 'wpnStat'
-    wpnName.innerHTML = wpn.name
-    wpnName.className = 'wpnStat'
-    wpnPts.innerHTML = wpn.points
-    wpnPts.className = 'wpnStat'
-    wpnRngInt.innerHTML = wpn.rangeint
-    wpnRngInt.className = 'wpnStat'
-    wpnLeth.innerHTML = wpn.lethality
-    wpnLeth.className = 'wpnStat'
-    wpnPen.innerHTML = wpn.pen
-    wpnPen.className = 'wpnStat'
-    
-    wpnDiv.appendChild(wpnClass)
-    wpnDiv.appendChild(wpnName)
-    wpnDiv.appendChild(wpnPts)
-    wpnDiv.appendChild(wpnRngInt)
-    wpnDiv.appendChild(wpnLeth)
-    wpnDiv.appendChild(wpnPen)
-    document.getElementById('div' + id).appendChild(wpnDiv)
-  
+  wpnDiv.className = 'wpnDiv'
+  wpnClass.innerHTML = wpn.category
+  wpnClass.className = 'wpnStat'
+  wpnName.innerHTML = wpn.name
+  wpnName.className = 'wpnStat'
+  wpnPts.innerHTML = wpn.points
+  wpnPts.className = 'wpnStat'
+  wpnRngInt.innerHTML = wpn.rangeint
+  wpnRngInt.className = 'wpnStat'
+  wpnLeth.innerHTML = wpn.lethality
+  wpnLeth.className = 'wpnStat'
+  wpnPen.innerHTML = wpn.pen
+  wpnPen.className = 'wpnStat'
+
+  wpnDiv.appendChild(wpnClass)
+  wpnDiv.appendChild(wpnName)
+  wpnDiv.appendChild(wpnPts)
+  wpnDiv.appendChild(wpnRngInt)
+  wpnDiv.appendChild(wpnLeth)
+  wpnDiv.appendChild(wpnPen)
+  document.getElementById('div' + id).appendChild(wpnDiv)
+
+  if (wpn.points !== 'N/A') {
+    totalPoints = totalPoints + wpn.points
+    document.getElementById('armyPoints').innerHTML = ''
+    document.getElementById('armyPoints').innerHTML = 'Total Points: ' + totalPoints
+  }
 }
 
 function addWeapon(e) {
@@ -68,9 +70,6 @@ function addWeapon(e) {
   id = id.replace('wpnBtn', '')
   document.getElementById('charSelectDiv').innerHTML = ''
 
-  
-
-  //let spcRls = document.createElement('div')
   let wpnContainer = document.createElement('div')
   let titleContainer = document.createElement('div')
 
@@ -108,8 +107,6 @@ function addWeapon(e) {
   titleDiv.appendChild(titlePen)
   titleDiv.appendChild(empTag)
   titleContainer.appendChild(titleDiv)
-  //titleDiv.appendChild(titleBtn)
-  //wpnContainer.appendChild(titleContainer)
 
   for (let i = 0; i < data[1].weapons.length; i++) {
 
@@ -121,8 +118,6 @@ function addWeapon(e) {
     let wpnLeth = document.createElement('p')
     let wpnPen = document.createElement('p')
     let wpnBtn = document.createElement('button')
-
-    //let wpnSR = document.createElement('p')
 
     wpnDiv.className = 'wpnDiv'
     wpnClass.innerHTML = data[1].weapons[i].category
@@ -148,15 +143,12 @@ function addWeapon(e) {
     wpnDiv.appendChild(wpnPen)
     wpnDiv.appendChild(wpnBtn)
     wpnContainer.appendChild(wpnDiv)
-    console.log(wpnBtn.id)
-    //document.getElementById('wpnBtn')
-    wpnBtn.addEventListener('click', function(e){
+
+    wpnBtn.addEventListener('click', function (e) {
       addWpn(e, data[1].weapons[i], id)
+      wpnBtn.disabled = true
     })
   }
-  
-  //document.getElementById('wpnBtn').addEventListener("click", addWpn);
-
 
   document.getElementById('charSelectDiv').appendChild(titleContainer)
   document.getElementById('charSelectDiv').appendChild(wpnContainer)
