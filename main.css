@@ -75,11 +75,34 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    /* flex: 1 1 1 1 1 1 1 100% */
 }
 
 .wpnStat {
-    flex: 0 0 15%; 
+    /* flex: 0 0 10%;  */
     border: 2px dotted black;
     margin: 0;
     margin-bottom: 20px;
+    width: 13%;
+    height: 60px;
+    align-items: center;
 }
+
+.titleStat{
+     /* flex: 0 0 10%;  */
+     /* border: 2px dotted black; */
+     margin: 0;
+     /* margin-bottom: 20px; */
+     width: 13%;
+     /* height: 60px; */
+     align-items: center;
+}
+
+.titleDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+

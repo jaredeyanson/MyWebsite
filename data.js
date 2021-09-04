@@ -451,7 +451,7 @@ var data = [
             {
                 name: 'Unarmed Combat Training',
                 category: 'Close Combat Weapons',
-                points: '',
+                points: 1,
                 rangeint: 'N/A',
                 lethality: 'N/A',
                 pen: 'N/A',
@@ -465,7 +465,7 @@ var data = [
             {
                 name: 'Close Combat Weapon',
                 category: 'Close Combat Weapons',
-                points: '',
+                points: 1,
                 rangeint: 'N/A',
                 lethality: 'N/A',
                 pen: 'N/A',
@@ -479,7 +479,7 @@ var data = [
             {
                 name: 'Specialist CCW',
                 category: 'Close Combat Weapons',
-                points: '',
+                points: 2,
                 rangeint: 'N/A',
                 lethality: 'N/A',
                 pen: 'N/A',
@@ -493,7 +493,7 @@ var data = [
             {
                 name: 'Pistol',
                 category: 'Sidearm',
-                points: '',
+                points: 2,
                 rangeint: 8,
                 lethality: '5+',
                 pen: 4,
@@ -509,9 +509,9 @@ var data = [
                 ]
             },
             {
-                name: 'Pistol',
+                name: 'Integral Suppressed Pistol',
                 category: 'Sidearm',
-                points: '',
+                points: 'N/A',
                 rangeint: 6,
                 lethality: '5+',
                 pen: 4,
@@ -529,7 +529,7 @@ var data = [
             {
                 name: 'Heavy Pistol',
                 category: 'Sidearm',
-                points: '',
+                points: 'N/A',
                 rangeint: 6,
                 lethality: '3+',
                 pen: 4,
