@@ -543,6 +543,560 @@ var data = [
                         desc: '(+1 on Breaching Roll)'
                     }
                 ]
+            },
+            {
+                name: 'Machine Pistol',
+                category: 'Sub-Machine Gun',
+                points: 'N/A',
+                rangeint: 8,
+                lethality: '5+',
+                pen: 4,
+                specialRules: [
+                    {
+                        name: 'Compact',
+                        desc: '(+1 in 1st RI)'
+                    },
+                    {
+                        name: 'Automatic',
+                        desc: '(up to 3 shots at -1 to hit)'
+                    }
+                ]
+            },
+            {
+                name: 'Sub-Machine Gun',
+                category: 'Sub-Machine Gun',
+                points: 'N/A',
+                rangeint: 10,
+                lethality: '5+',
+                pen: 4,
+                specialRules: [
+                    {
+                        name: 'Compact',
+                        desc: '(+1 in 1st RI)'
+                    },
+                    {
+                        name: 'Automatic',
+                        desc: '(up to 3 shots at -1 to hit)'
+                    }
+                ]
+            },
+            {
+                name: 'Sawn off, Under barrel Shotgun',
+                category: 'Shotguns',
+                points: 'N/A',
+                rangeint: 4,
+                lethality: '3+',
+                pen: 4,
+                specialRules: [
+                    {
+                        name: 'Compact',
+                        desc: '(+1 in 1st RI)'
+                    },
+                    {
+                        name: 'Breaching',
+                        desc: '(+1 on Breaching Roll)'
+                    },
+                    {
+                        name: 'Buckshot'
+                    }
+                ]
+            },
+            {
+                name: 'Shotgun',
+                category: 'Shotguns',
+                points: 2,
+                rangeint: 8,
+                lethality: '3+',
+                pen: 4,
+                specialRules: [
+                    {
+                        name: 'Breaching',
+                        desc: '+1 on breaching roll'
+                    },
+                    {
+                        name: 'Buckshot',
+                        desc: ''
+                    }
+                ]
+            },
+            {
+                name: 'Combat Shotgun',
+                category: 'Shotguns',
+                points: 6,
+                rangeint: 6,
+                lethality: '3+',
+                pen: 4,
+                specialRules: [
+                    {
+                        name: 'Buckshot',
+                        desc: ''
+                    },
+                    {
+                        name: 'Rapid Fire',
+                        desc: '(1 shot, or 2 shots at -1 to hit)'
+                    },
+                    {
+                        name: 'Compact',
+                        desc: '(+1 in 1st RI)'
+                    },
+                    {
+                        name: 'Breaching',
+                        desc: '+1 on breaching roll'
+                    }  
+                ]
+            },
+            {
+                name: 'Auto Shotgun',
+                category: 'Shotguns',
+                points: 10,
+                rangeint: 6,
+                lethality: '3+',
+                pen: 4,
+                specialRules: [
+                    {
+                        name: 'Buckshot',
+                        desc: ''
+                    },
+                    {
+                        name: 'Automatic',
+                        desc: 'up to 3 shots at -1 to hit'
+                    },
+                    {
+                        name: 'Breaching',
+                        desc: '+2 on breaching roll'
+                    }
+                ]
+            },
+            {
+                name: 'CQB Carbine',
+                category: 'Rifles and Carbines',
+                points: 7,
+                rangeint: 12,
+                lethality: '4+',
+                pen: 5,
+                specialRules: [
+                    {
+                        name: 'Compact',
+                        desc: '(+1 in 1st RI)'
+                    },
+                    {
+                        name: 'Rapid Fire',
+                        desc: '1 shot, or 2 shots at -1 to hit'
+                    }
+                ]
+            },
+            {
+                name: 'Carbine',
+                category: 'Rifles and Carbines',
+                points: 8,
+                rangeint: 16,
+                lethality: '4+',
+                pen: 5,
+                specialRules: [
+                    {
+                        name: 'Compact',
+                        desc: '(+1 in 1st RI)'
+                    },
+                    {
+                        name: 'Rapid Fire',
+                        desc: '1 shot, or 2 shots at -1 to hit'
+                    }
+                ]
+            },
+            {
+                name: 'Assault Rifle',
+                category: 'Rifles and Carbines',
+                points: 5,
+                rangeint: 24,
+                lethality: '4+',
+                pen: 5,
+                specialRules: [
+                    {
+                        name: 'Rapid Fire',
+                        desc: '1 shot, or 2 shots at -1 to hit'
+                    }
+                ]
+            },
+            {
+                name: 'CQB Battle Rifle',
+                category: 'Rifles and Carbines',
+                points: 8,
+                rangeint: 12,
+                lethality: '3+',
+                pen: 5,
+                specialRules: [
+                    {
+                        name: 'Compact',
+                        desc: '(+1 in 1st RI)'
+                    },
+                    {
+                        name: 'Rapid Fire',
+                        desc: '1 shot, or 2 shots at -1 to hit'
+                    }
+                ]
+            },
+            {
+                name: 'Battle Rifle',
+                category: 'Rifles and Carbines',
+                points: 7,
+                rangeint: 26,
+                lethality: '3+',
+                pen: 6,
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: 'Dedicated Marksman Rifle',
+                category: 'Rifles and Carbines',
+                points: 8,
+                rangeint: 32,
+                lethality: '3+',
+                pen: 6,
+                specialRules: [
+                    {
+                        name: 'Scope',
+                        desc: '+1 to hit if not moved in all but 1st RI'
+                    }
+                ]
+            },
+            {
+                name: 'Heavy Assault Rifle',
+                category: 'Rifles and Carbines',
+                points: 10,
+                rangeint: 16,
+                lethality: '2+',
+                pen: 6,
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: 'Bolt Action Rifle',
+                category: 'Rifles and Carbines',
+                points: '',
+                rangeint: 32,
+                lethality: '3+',
+                pen: 6,
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: 'Bolt Action/Light Sniper Rifle',
+                category: 'Light Sniper Rifle',
+                points: 15,
+                rangeint: 36,
+                lethality: '3+',
+                pen: 6,
+                specialRules: [
+                    {
+                        name: 'Scope',
+                        desc: '+1 to hit if not moved in all but 1st RI'
+                    },
+                    {
+                        name: 'Crew Served',
+                        desc: 'assistant allows 1 re-roll to hit per turn'
+                    },
+                    {
+                        name: 'Sniper Weapon',
+                        desc: ''
+                    }
+                ]
+            },
+            {
+                name: 'Heavy Sniper Rifle',
+                category: 'Heavy Sniper Rifles',
+                points: 20,
+                rangeint: 36,
+                lethality: '2+',
+                pen: 7,
+                specialRules: [
+                    {
+                        name: 'Scope',
+                        desc: '+1 to hit if not moved in all but 1st RI'
+                    },
+                    {
+                        name: 'Crew Served',
+                        desc: 'assistant allows 1 re-roll to hit per turn'
+                    },
+                    {
+                        name: 'Sniper Weapon',
+                        desc: ''
+                    },
+                    {
+                        name: 'Encumbering',
+                        desc: 'no move and fire, -1 Agility to equipped model'
+                    }
+                ]
+            },
+            {
+                name: 'Anit-Material Rifle',
+                category: 'Heavy Sniper Rifle',
+                points: 25,
+                rangeint: 36,
+                lethality: '1+',
+                pen: 8,
+                specialRules: [
+                    {
+                        name: 'Scope',
+                        desc: '+1 to hit if not moved in all but 1st RI'
+                    },
+                    {
+                        name: 'Crew Served',
+                        desc: 'assistant allows 1 re-roll to hit per turn'
+                    },
+                    {
+                        name: 'Sniper Weapon',
+                        desc: ''
+                    },
+                    {
+                        name: 'Encumbering',
+                        desc: 'no move and fire, -1 Agility to equipped model'
+                    },
+                    {
+                        name: 'Frag 1"',
+                        desc: ''
+                    },
+                    {
+                        name: 'Incendiary',
+                        desc: 'burn damage'
+                    },
+                    {
+                        name: 'Heavy Weapon',
+                        desc: ''
+                    }
+                ]
+            },
+            {
+                name: 'Compact Light Machine Gun',
+                category: 'Light Machine Guns',
+                points: 15,
+                rangeint: 18,
+                lethality: '4+',
+                pen: 5,
+                specialRules: [
+                    {
+                        name: 'Sustained Fire',
+                        desc: 'if static: 4 shots split within 2", if moved Automatic'
+                    },
+                    {
+                        name: 'Compact',
+                        desc: '+1 in 1st RI'
+                    }
+                ]
+            },
+            {
+                name: 'Light Machine Gun',
+                category: 'Light Machine Guns',
+                points: 10,
+                rangeint: 24,
+                lethality: '4+',
+                pen: 5,
+                specialRules: [
+                    {
+                        name: 'Sustained Fire',
+                        desc: 'if static: 4 shots split within 2", if moved Automatic'
+                    }
+                ]
+            },
+            {
+                name: 'Medium Machine Gun',
+                category: 'Medium and Heavy Machine Guns',
+                points: 15,
+                rangeint: 24,
+                lethality: '3+',
+                pen: 6,
+                specialRules: [
+                    {
+                        name: 'Crew Served',
+                        desc: 'assistant allows 1 re-roll to hit per turn'
+                    },
+                    {
+                        name: 'Encumbering',
+                        desc: 'no move and fire, -1 Agility to euipped model'
+                    },
+                    {
+                        name: 'Sustained Fire',
+                        desc: 'if static: 4 shots split within 2", if moved Automatic'
+                    }
+                ]
+            },
+            {
+                name: 'Heavy Machine Gun',
+                category: 'Medium and Heavy Machine Guns',
+                points: 20,
+                rangeint: 36,
+                lethality: '2+',
+                pen: 7,
+                specialRules: [
+                    {
+                        name: 'Heavy Weapon',
+                        desc: ''
+                    },
+                    {
+                        name: 'Encumbering',
+                        desc: 'no move and fire, -1 Agility to equipped model, carried and set up by 2 models'
+                    },
+                    {
+                        name: 'Automatic',
+                        desc: 'up to 3 shots at -1 to hit'
+                    }
+                ]
+            },
+            {
+                name: 'Under Barrel Grenade launcher',
+                category: '',
+                points: 5,
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: 'Single Shot ',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
+            },
+            {
+                name: '',
+                category: '',
+                points: '',
+                rangeint: '',
+                lethality: '',
+                pen: '',
+                specialRules: [
+                    
+                ]
             }
         ],
         specialRules: [

@@ -124,7 +124,7 @@ function addWeapon(e) {
     wpnClass.className = 'wpnStat'
     wpnName.innerHTML = data[1].weapons[i].name
     wpnName.className = 'wpnStat'
-    wpnPts.innerHTML = data[1].weapons[i].points
+    wpnPts.innerHTML = 'Points \n' + data[1].weapons[i].points
     wpnPts.className = 'wpnStat'
     wpnRngInt.innerHTML = data[1].weapons[i].rangeint
     wpnRngInt.className = 'wpnStat'
@@ -205,7 +205,7 @@ function addModel(e) {
   // console.log(charArrayLength)
   // console.log(lastID)
   // console.log(newID)
-  console.log(newID)
+  //console.log(newID)
   //console.log(charArray)
 
   totalPoints = totalPoints + character.points

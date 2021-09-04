@@ -14,13 +14,15 @@ body {
     float: left;
     width: 49%;
     border: 2px solid black;
-    position: fixed;
+    /* position: fixed; */
+    
 }
 
 #leftDiv:hover {
     background-color: gray;
-    opacity: .8;
-    width: 49%
+    opacity: .9;
+    width: 49%;
+    position: relative;
 }
 
 #rightDiv {
@@ -32,7 +34,7 @@ body {
 
 #rightDiv:hover{
     background-color: gray;
-    opacity: .8;
+    opacity: .9;
     
 }
 
