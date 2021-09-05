@@ -1051,7 +1051,7 @@ var data = [
             {
                 name: 'Flamethrower',
                 category: 'Specialist Weapons',
-                points: '',
+                points: 15,
                 rangeint: 9,
                 lethality: '3+',
                 pen: 'NA',
@@ -1073,7 +1073,7 @@ var data = [
             {
                 name: 'Stun Gun',
                 category: 'Specialist Weapons',
-                points: '',
+                points: 5,
                 rangeint: 2,
                 lethality: 'NA',
                 pen: 'NA',
@@ -1091,7 +1091,7 @@ var data = [
             {
                 name: 'MANPADS',
                 category: 'Specialist Weapons',
-                points: '',
+                points: 20,
                 rangeint: 'NA',
                 lethality: 'NA',
                 pen: 'NA',
@@ -1109,7 +1109,7 @@ var data = [
             {
                 name: 'Crossbow',
                 category: 'Specialist Weapons',
-                points: '',
+                points: 6,
                 rangeint: 12,
                 lethality: '4+',
                 pen: 4,
@@ -1127,7 +1127,7 @@ var data = [
             {
                 name: 'RPG HEAT Warhead',
                 category: 'Shoulder Fired Launchers',
-                points: '',
+                points: 10,
                 rangeint: 18,
                 lethality: '4+',
                 pen: '7+D6',
@@ -1136,56 +1136,56 @@ var data = [
                 ]
             },
             {
-                name: '',
-                category: '',
-                points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                name: 'RPG Frag Warhead',
+                category: 'Shoulder Fired launchers',
+                points: 15,
+                rangeint: 18,
+                lethality: '5+',
+                pen: 5,
                 specialRules: [
                     
                 ]
             },
             {
-                name: '',
-                category: '',
-                points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                name: 'RPG Thermobaric Warhead',
+                category: 'Shoulder Fired Launchers',
+                points: 20,
+                rangeint: 18,
+                lethality: '2+',
+                pen: 5,
                 specialRules: [
                     
                 ]
             },
             {
-                name: '',
-                category: '',
-                points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                name: 'RPG Tandem Warhead',
+                category: 'Shoulder Fired Launchers',
+                points: 'NA',
+                rangeint: 18,
+                lethality: '4+',
+                pen: '14+D6',
                 specialRules: [
                     
                 ]
             },
             {
-                name: '',
-                category: '',
-                points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                name: 'Light Anti-Tank Weapon',
+                category: 'Shoulder Fired Launchers',
+                points: 20,
+                rangeint: 24,
+                lethality: '4+',
+                pen: '7+D6',
                 specialRules: [
                     
                 ]
             },
             {
-                name: '',
-                category: '',
-                points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                name: 'Light Recoilless Rifle',
+                category: 'Shoulder Fired launchers',
+                points: 20,
+                rangeint: 18,
+                lethality: '3+',
+                pen: '10+D3',
                 specialRules: [
                     
                 ]
