@@ -1049,56 +1049,88 @@ var data = [
                 ]
             },
             {
-                name: '',
-                category: '',
+                name: 'Flamethrower',
+                category: 'Specialist Weapons',
                 points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                rangeint: 9,
+                lethality: '3+',
+                pen: 'NA',
                 specialRules: [
-                    
+                    {
+                        name: 'Range 0-9" only',
+                        desc: ''
+                    },
+                    {
+                        name: 'Flamethrower',
+                        desc: ''
+                    },
+                    {
+                        name: 'Encumbering',
+                        desc: 'no move and fire, -1 Agility to equipped models'
+                    }
                 ]
             },
             {
-                name: '',
-                category: '',
+                name: 'Stun Gun',
+                category: 'Specialist Weapons',
                 points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                rangeint: 2,
+                lethality: 'NA',
+                pen: 'NA',
                 specialRules: [
-                    
+                    {
+                        name: 'Range 0-2" only',
+                        desc: '+2 to close combat if used in CC, hit always incapacitate for 2 turns and target model may be captured'
+                    },
+                    {
+                        name: 'Compact',
+                        desc: '+1 to hit'
+                    }
                 ]
             },
             {
-                name: '',
-                category: '',
+                name: 'MANPADS',
+                category: 'Specialist Weapons',
                 points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                rangeint: 'NA',
+                lethality: 'NA',
+                pen: 'NA',
                 specialRules: [
-                    
+                    {
+                        name: 'MANPADS',
+                        desc: ''
+                    },
+                    {
+                        name: 'Emcumbering',
+                        desc: 'no move and fire, -1 Agility to equipped model'
+                    }
                 ]
             },
             {
-                name: '',
-                category: '',
+                name: 'Crossbow',
+                category: 'Specialist Weapons',
                 points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                rangeint: 12,
+                lethality: '4+',
+                pen: 4,
                 specialRules: [
-                    
+                    {
+                        name: 'Other',
+                        desc: 'audible in first 2 RIs only'
+                    },
+                    {
+                        name: 'Encumbering',
+                        desc: 'no move an fire, -1 Agility to equipped model'
+                    }
                 ]
             },
             {
-                name: '',
-                category: '',
+                name: 'RPG HEAT Warhead',
+                category: 'Shoulder Fired Launchers',
                 points: '',
-                rangeint: '',
-                lethality: '',
-                pen: '',
+                rangeint: 18,
+                lethality: '4+',
+                pen: '7+D6',
                 specialRules: [
                     
                 ]
