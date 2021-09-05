@@ -11,6 +11,11 @@ let charSelectDiv = document.createElement('div')
 charSelectDiv.id = 'charSelectDiv'
 let armyDiv = document.createElement('div')
 armyDiv.id = 'armyDiv'
+let printBtn = document.createElement('button')
+printBtn.innerHTML = 'PRINT LIST'
+printBtn.addEventListener('click', function(){
+  printArmyList()
+})
 
 let charArray = []
 let armyList = []
@@ -22,6 +27,7 @@ leftDiv.appendChild(charSelectDiv)
 rightDiv.appendChild(totalPntsDiv)
 rightDiv.appendChild(armyDiv)
 
+document.body.appendChild(printBtn)
 document.body.appendChild(leftDiv)
 document.body.appendChild(rightDiv)
 
@@ -30,6 +36,39 @@ let totalPoints = 0
 
 //Add weapons to the Army List
 function addWpn(e, wpn, id) {
+  let category
+  let name
+  let points
+  let rangeint
+  let lethality
+  let pen 
+  for (let i = 0; i < armyList.length; i++){
+    if (id == armyList[i].id && wpn.rangeint != undefined){
+      armyList[i].weapons.push(wpn)
+    }else if (id == armyList[i].id && wpn.rangeint == undefined){
+      armyList[i].equipment.push(wpn)
+    }
+  }
+  if (wpn.rangeint === undefined){
+    rangeint = ''
+  }else {
+    rangeint = wpn.rangeint
+  }
+  if (wpn.lethality === undefined){
+    lethality = ''
+  }else {
+    lethality = wpn.lethality
+  }
+  if (wpn.pen === undefined){
+    pen = ''
+  }else {
+    pen = wpn.pen
+  }
+  if (wpn.category === undefined){
+    category = wpn.equipType
+  }else {
+    category = wpn.category
+  }
 
   let wpnDiv = document.createElement('div')
   let wpnClass = document.createElement('p')
@@ -40,17 +79,17 @@ function addWpn(e, wpn, id) {
   let wpnPen = document.createElement('p')
 
   wpnDiv.className = 'wpnDiv'
-  wpnClass.innerHTML = wpn.category
+  wpnClass.innerHTML =category
   wpnClass.className = 'wpnStat'
   wpnName.innerHTML = wpn.name
   wpnName.className = 'wpnStat'
   wpnPts.innerHTML = wpn.points
   wpnPts.className = 'wpnStat'
-  wpnRngInt.innerHTML = wpn.rangeint
+  wpnRngInt.innerHTML = rangeint
   wpnRngInt.className = 'wpnStat'
-  wpnLeth.innerHTML = wpn.lethality
+  wpnLeth.innerHTML = lethality
   wpnLeth.className = 'wpnStat'
-  wpnPen.innerHTML = wpn.pen
+  wpnPen.innerHTML = pen
   wpnPen.className = 'wpnStat'
 
   wpnDiv.appendChild(wpnClass)
@@ -128,41 +167,28 @@ function addWeapon(e) {
 
     wpnBtn.addEventListener('click', function (e) {
       addWpn(e, data[1].weapons[i], id)
+      addEquip(e, id)
       wpnBtn.disabled = true
     })
   }
   document.getElementById('charSelectDiv').appendChild(wpnContainer)
 }
 
-function addEquip(e) {
-  let id = e.srcElement.id
-  id = id.replace('eqpBtn', '')
+function addEquip(e, id) {
+  // let id = e.srcElement.id
+
+  //id = id.replace('eqpBtn', '')
   console.log(id)
   document.getElementById('charSelectDiv').innerHTML = ''
 
   let eqpContainer = document.createElement('div')  
 
   for (let i = 0; i < data[2].equipment.length; i++) {
-    // let wpnRules = data[1].equipment[i]
-
-    // let eqpRulesDiv = document.createElement("div")
-    // eqpRulesDiv.className = 'wpnRulesDiv'
-
-    // for (let h = 0; h < wpnRules.length; h++){
-    //   let wpnRulesData = document.createElement('p')
-    //   wpnRulesData.className = 'wpnData'
-    //   wpnRulesData.innerHTML = wpnRules[h].name + ', '
-
-    //   wpnRulesDiv.appendChild(wpnRulesData)
-    // }
 
     let eqpDiv = document.createElement('div')
     let eqpClass = document.createElement('p')
     let eqpName = document.createElement('p')
     let eqpPts = document.createElement('p')
-    //let eqpRngInt = document.createElement('p')
-    //let eqpLeth = document.createElement('p')
-    //let eqpPen = document.createElement('p')
     let eqpBtn = document.createElement('button')   
 
     eqpDiv.className = 'wpnDiv'
@@ -171,25 +197,15 @@ function addEquip(e) {
     eqpName.innerHTML = data[2].equipment[i].name
     eqpName.className = 'wpnStat'
     eqpPts.innerHTML = 'Points \n' + data[2].equipment[i].points
-    // wpnRngInt.innerHTML = data[1].weapons[i].rangeint
-    // wpnRngInt.className = 'wpnStat'
-    // wpnLeth.innerHTML = data[1].weapons[i].lethality
-    // wpnLeth.className = 'wpnStat'
-    // wpnPen.innerHTML = data[1].weapons[i].pen
-    // wpnPen.className = 'wpnStat'
     eqpBtn.innerHTML = 'Add Equipment'
     eqpBtn.id = 'eqpBtn'
 
     eqpDiv.appendChild(eqpClass)
     eqpDiv.appendChild(eqpName)
     eqpDiv.appendChild(eqpPts)
-    // eqpDiv.appendChild(wpnRngInt)
-    // eqpDiv.appendChild(wpnLeth)
-    // eqpDiv.appendChild(wpnPen)
     eqpDiv.appendChild(eqpBtn)
     
     eqpContainer.appendChild(eqpDiv)
-    //wpnContainer.appendChild(wpnRulesDiv)
 
     eqpBtn.addEventListener('click', function (e) {
       addWpn(e, data[2].equipment[i], id)
@@ -201,6 +217,16 @@ function addEquip(e) {
 
 //add character to army list
 function addModel(e) {
+  let newID = Date.now()
+  
+  let characterProfile =  {
+    id: '',
+    model: {
+
+    },
+    weapons:[],
+    equipment:[]
+  }
 
   armyDivIndex = armyDivIndex + 1
   let character
@@ -232,7 +258,9 @@ function addModel(e) {
 
   charArray.push(character)
 
-  let newID = Date.now()
+  characterProfile.id = newID
+  characterProfile.model = character
+  armyList.push(characterProfile)
 
   totalPoints = totalPoints + character.points
 
@@ -364,7 +392,42 @@ function deleteComponent(){
 }
 
 function printArmyList(){
+  printBtn.disabled = true
+  console.log(armyList)
+  // document.body.innerHTML = ''
+  leftDiv.style.display = 'none'
+  rightDiv.style.display = 'none'
+  let backBtn = document.createElement('button')
+  backBtn.innerHTML = 'Back to Creation'
+  backBtn.id = 'backBtn'
+  document.body.appendChild(backBtn)
+  backBtn.addEventListener('click', function(){
+    backBtnFunc()
+  })
 
+  for (let i = 0; i < armyList.length; i++){
+    let printDiv = document.createElement('div')
+    let modelDiv = document.createElement('div')
+    let modelName = document.createElement('h1')
+
+    printDiv.id = 'printDiv'
+    printDiv.innerHTML = ''
+    modelName.innerHTML = armyList[i].model.modelName
+
+    modelDiv.appendChild(modelName)
+    printDiv.appendChild(modelDiv)
+    document.body.appendChild(printDiv)
+  }
+
+}
+
+function backBtnFunc(){
+  leftDiv.style.display = "initial"
+  rightDiv.style.display = 'initial'
+  document.getElementById('backBtn').style.display = 'none'
+  printBtn.disabled = false
+  // document.getElementById('printDiv').style.display = 'none'
+  // document.getElementById('printDiv').innerHTML = ''
 }
 
 /*
@@ -372,3 +435,4 @@ need an Army list class/object array
 need to pass id
 
 */
+

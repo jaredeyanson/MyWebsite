@@ -1270,6 +1270,11 @@ var data = [
                 equipType: 'Combat Gear',
                 name: 'Radio Comms',
                 points: 5
+            },
+            {
+                equipType: 'NONE',
+                name: 'NONE',
+                points: 0
             }
         ]
     }
