@@ -13,6 +13,7 @@ let armyDiv = document.createElement('div')
 armyDiv.id = 'armyDiv'
 
 let charArray = []
+let armyList = []
 let armyDivIndex = 0
 
 leftDiv.appendChild(tierBtnsDiv)
@@ -26,6 +27,8 @@ document.body.appendChild(rightDiv)
 
 //Set points counter value to 0
 let totalPoints = 0
+
+//Add weapons to the Army List
 function addWpn(e, wpn, id) {
 
   let wpnDiv = document.createElement('div')
@@ -56,59 +59,36 @@ function addWpn(e, wpn, id) {
   wpnDiv.appendChild(wpnRngInt)
   wpnDiv.appendChild(wpnLeth)
   wpnDiv.appendChild(wpnPen)
-  document.getElementById('div' + id).appendChild(wpnDiv)
 
   if (wpn.points !== 'N/A') {
     totalPoints = totalPoints + wpn.points
     document.getElementById('armyPoints').innerHTML = ''
     document.getElementById('armyPoints').innerHTML = 'Total Points: ' + totalPoints
   }
+  document.getElementById('wpnStatDiv' + id).appendChild(wpnDiv)
 }
 
+//post and display weapons list
 function addWeapon(e) {
   let id = e.srcElement.id
   id = id.replace('wpnBtn', '')
   document.getElementById('charSelectDiv').innerHTML = ''
 
-  let wpnContainer = document.createElement('div')
-  let titleContainer = document.createElement('div')
-
-  let titleDiv = document.createElement('div')
-  let titleClass = document.createElement('p')
-  let titleName = document.createElement('p')
-  let titlePts = document.createElement('p')
-  let titleRngInt = document.createElement('p')
-  let titleLeth = document.createElement('p')
-  let titlePen = document.createElement('p')
-  let empTag = document.createElement('p')
-
-  titleClass.innerHTML = 'Category'
-  titleClass.className = 'titleStat'
-  titleName.innerHTML = 'Name'
-  titleName.className = 'titleStat'
-  titlePts.innerHTML = 'Points'
-  titlePts.className = 'titleStat'
-  titleRngInt.innerHTML = 'Range Int'
-  titleRngInt.className = 'titleStat'
-  titleLeth.innerHTML = 'Lethality'
-  titleLeth.className = 'titleStat'
-  titlePen.innerHTML = 'Penalty'
-  titlePen.className = 'titleStat'
-  titleDiv.className = 'titleDiv'
-  empTag.className = 'titleStat'
-  empTag.innerHTML = ' '
-  titleContainer.className = 'titleContainer'
-
-  titleDiv.appendChild(titleClass)
-  titleDiv.appendChild(titleName)
-  titleDiv.appendChild(titlePts)
-  titleDiv.appendChild(titleRngInt)
-  titleDiv.appendChild(titleLeth)
-  titleDiv.appendChild(titlePen)
-  titleDiv.appendChild(empTag)
-  titleContainer.appendChild(titleDiv)
+  let wpnContainer = document.createElement('div')  
 
   for (let i = 0; i < data[1].weapons.length; i++) {
+    let wpnRules = data[1].weapons[i].specialRules
+
+    let wpnRulesDiv = document.createElement("div")
+    wpnRulesDiv.className = 'wpnRulesDiv'
+
+    for (let h = 0; h < wpnRules.length; h++){
+      let wpnRulesData = document.createElement('p')
+      wpnRulesData.className = 'wpnData'
+      wpnRulesData.innerHTML = wpnRules[h].name + ', '
+
+      wpnRulesDiv.appendChild(wpnRulesData)
+    }
 
     let wpnDiv = document.createElement('div')
     let wpnClass = document.createElement('p')
@@ -117,7 +97,7 @@ function addWeapon(e) {
     let wpnRngInt = document.createElement('p')
     let wpnLeth = document.createElement('p')
     let wpnPen = document.createElement('p')
-    let wpnBtn = document.createElement('button')
+    let wpnBtn = document.createElement('button')   
 
     wpnDiv.className = 'wpnDiv'
     wpnClass.innerHTML = data[1].weapons[i].category
@@ -142,22 +122,81 @@ function addWeapon(e) {
     wpnDiv.appendChild(wpnLeth)
     wpnDiv.appendChild(wpnPen)
     wpnDiv.appendChild(wpnBtn)
+    
     wpnContainer.appendChild(wpnDiv)
+    wpnContainer.appendChild(wpnRulesDiv)
 
     wpnBtn.addEventListener('click', function (e) {
       addWpn(e, data[1].weapons[i], id)
       wpnBtn.disabled = true
     })
   }
-
-  document.getElementById('charSelectDiv').appendChild(titleContainer)
   document.getElementById('charSelectDiv').appendChild(wpnContainer)
 }
 
 function addEquip(e) {
   let id = e.srcElement.id
   id = id.replace('eqpBtn', '')
+  console.log(id)
   document.getElementById('charSelectDiv').innerHTML = ''
+
+  let eqpContainer = document.createElement('div')  
+
+  for (let i = 0; i < data[2].equipment.length; i++) {
+    // let wpnRules = data[1].equipment[i]
+
+    // let eqpRulesDiv = document.createElement("div")
+    // eqpRulesDiv.className = 'wpnRulesDiv'
+
+    // for (let h = 0; h < wpnRules.length; h++){
+    //   let wpnRulesData = document.createElement('p')
+    //   wpnRulesData.className = 'wpnData'
+    //   wpnRulesData.innerHTML = wpnRules[h].name + ', '
+
+    //   wpnRulesDiv.appendChild(wpnRulesData)
+    // }
+
+    let eqpDiv = document.createElement('div')
+    let eqpClass = document.createElement('p')
+    let eqpName = document.createElement('p')
+    let eqpPts = document.createElement('p')
+    //let eqpRngInt = document.createElement('p')
+    //let eqpLeth = document.createElement('p')
+    //let eqpPen = document.createElement('p')
+    let eqpBtn = document.createElement('button')   
+
+    eqpDiv.className = 'wpnDiv'
+    eqpClass.innerHTML = data[2].equipment[i].equipType
+    eqpClass.className = 'wpnStat'
+    eqpName.innerHTML = data[2].equipment[i].name
+    eqpName.className = 'wpnStat'
+    eqpPts.innerHTML = 'Points \n' + data[2].equipment[i].points
+    // wpnRngInt.innerHTML = data[1].weapons[i].rangeint
+    // wpnRngInt.className = 'wpnStat'
+    // wpnLeth.innerHTML = data[1].weapons[i].lethality
+    // wpnLeth.className = 'wpnStat'
+    // wpnPen.innerHTML = data[1].weapons[i].pen
+    // wpnPen.className = 'wpnStat'
+    eqpBtn.innerHTML = 'Add Equipment'
+    eqpBtn.id = 'eqpBtn'
+
+    eqpDiv.appendChild(eqpClass)
+    eqpDiv.appendChild(eqpName)
+    eqpDiv.appendChild(eqpPts)
+    // eqpDiv.appendChild(wpnRngInt)
+    // eqpDiv.appendChild(wpnLeth)
+    // eqpDiv.appendChild(wpnPen)
+    eqpDiv.appendChild(eqpBtn)
+    
+    eqpContainer.appendChild(eqpDiv)
+    //wpnContainer.appendChild(wpnRulesDiv)
+
+    eqpBtn.addEventListener('click', function (e) {
+      addWpn(e, data[2].equipment[i], id)
+      eqpBtn.disabled = true
+    })
+  }
+  document.getElementById('charSelectDiv').appendChild(eqpContainer)
 }
 
 //add character to army list
@@ -174,11 +213,8 @@ function addModel(e) {
     }
   }
 
-  //character.id = newID
-
   let statDiv = document.createElement('div')
   statDiv.className = 'statDiv'
-
 
   for (let h = 0; h < character.stats.length; h++) {
     let stat = document.createElement('h2')
@@ -194,19 +230,9 @@ function addModel(e) {
     statDiv.appendChild(stat)
   }
 
-  // console.log(document.body.childNodes.length)
   charArray.push(character)
 
-  // let charArrayLength = charArray.length - 1 
-  // let lastID = charArray[charArrayLength].id
   let newID = Date.now()
-  //character.id = newID
-
-  // console.log(charArrayLength)
-  // console.log(lastID)
-  // console.log(newID)
-  //console.log(newID)
-  //console.log(charArray)
 
   totalPoints = totalPoints + character.points
 
@@ -240,7 +266,7 @@ function addModel(e) {
   equipButton.id = 'eqpBtn' + newID
   wpnStatDiv.id = 'wpnStatDiv' + newID
   eqpStatDiv.id = 'eqpStatDiv' + newID
-  //document.getElementById('weapBtn').addEventListener("click", addWeapon);
+  wpnStatDiv.className = 'wpnStatDiv'
 
   charBtnDiv.appendChild(weapButton)
   charBtnDiv.appendChild(equipButton)
@@ -261,8 +287,7 @@ function addModel(e) {
 
 //present character options to user
 function forceDetail(e) {
-  //document.getElementById('charSelectDiv').innerHTML = ''
-  // document.getElementById('charDiv').innerHTML = ''
+
   let characterInfo
   let tier
   for (let i = 0; i < data[0].tier.length; i++) {
@@ -276,17 +301,12 @@ function forceDetail(e) {
 
   charDiv.id = 'charDiv'
 
-  //$("#charDiv").load("#charDiv .reloaded-divs > *");
-  //document.getElementById('charDiv').load('charDiv')
-  //load("index.html", document.getElementById("charDiv"))
-
   for (let i = 0; i < characterInfo.length; i++) {
     let newDiv = document.createElement("div")
     let button = document.createElement("button")
     let points = document.createElement("h1")
     let level = document.createElement("h1")
     let statDiv = document.createElement("div")
-    //document.getElementById(tier).disabled = true
 
     button.innerHTML = characterInfo[i].modelName
     button.id = characterInfo[i].modelName
@@ -310,19 +330,14 @@ function forceDetail(e) {
       statDiv.appendChild(stat)
     }
 
-
-
     charDiv.appendChild(button)
     charDiv.appendChild(level)
     charDiv.appendChild(points)
     charDiv.appendChild(newDiv)
     charDiv.appendChild(statDiv)
-    //charSelectDiv.appendChild(charDiv)
-    //document.getElementById('charSelectDiv').innerHTML = charSelectDiv
 
     document.getElementById('charSelectDiv').innerHTML = ''
     charSelectDiv.appendChild(charDiv)
-    //document.getElementById('charSelectDiv').innerHTML = charDiv
     document.getElementById(characterInfo[i].modelName).addEventListener("click", addModel);
 
 
@@ -340,5 +355,20 @@ for (let i = 0; i < tierList.length; i++) {
   button.innerHTML = tierList[i]
   tierBtnsDiv.appendChild(button)
   button.id = tierList[i]
+  button.className = 'tierButton'
   document.getElementById(tierList[i]).addEventListener("click", forceDetail);
 }
+
+function deleteComponent(){
+
+}
+
+function printArmyList(){
+
+}
+
+/*
+need an Army list class/object array
+need to pass id
+
+*/

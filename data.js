@@ -642,7 +642,7 @@ var data = [
                     {
                         name: 'Breaching',
                         desc: '+1 on breaching roll'
-                    }  
+                    }
                 ]
             },
             {
@@ -743,7 +743,7 @@ var data = [
                 lethality: '3+',
                 pen: 6,
                 specialRules: [
-                    
+
                 ]
             },
             {
@@ -768,7 +768,7 @@ var data = [
                 lethality: '2+',
                 pen: 6,
                 specialRules: [
-                    
+
                 ]
             },
             {
@@ -779,7 +779,7 @@ var data = [
                 lethality: '3+',
                 pen: 6,
                 specialRules: [
-                    
+
                 ]
             },
             {
@@ -1132,7 +1132,7 @@ var data = [
                 lethality: '4+',
                 pen: '7+D6',
                 specialRules: [
-                    
+
                 ]
             },
             {
@@ -1143,7 +1143,7 @@ var data = [
                 lethality: '5+',
                 pen: 5,
                 specialRules: [
-                    
+
                 ]
             },
             {
@@ -1154,7 +1154,7 @@ var data = [
                 lethality: '2+',
                 pen: 5,
                 specialRules: [
-                    
+
                 ]
             },
             {
@@ -1165,7 +1165,7 @@ var data = [
                 lethality: '4+',
                 pen: '14+D6',
                 specialRules: [
-                    
+
                 ]
             },
             {
@@ -1176,7 +1176,7 @@ var data = [
                 lethality: '4+',
                 pen: '7+D6',
                 specialRules: [
-                    
+
                 ]
             },
             {
@@ -1187,7 +1187,7 @@ var data = [
                 lethality: '3+',
                 pen: '10+D3',
                 specialRules: [
-                    
+
                 ]
             }
         ],
@@ -1199,6 +1199,78 @@ var data = [
         ]
     },
     {
-        class: 'Equipment'
+        class: 'Equipment',
+        equipment: [
+            {
+                equipType: 'Weapon Attachments/Enhancements',
+                name: 'Red Dot',
+                points: 3
+            },
+            {
+                equipType: 'Weapon Attachments/Enhancements',
+                name: 'Laser Sight',
+                points: 3
+            },
+            {
+                equipType: 'Weapon Attachments/Enhancements',
+                name: 'Scope',
+                points: 5
+            },
+            {
+                equipType: 'Weapon Attachments/Enhancements',
+                name: 'Suppressor',
+                points: 5
+            },
+            {
+                equipType: 'Weapon Attachments/Enhancements',
+                name: 'Flashlight/Torch',
+                points: 1
+            },
+            {
+                equipType: 'Weapon Attachments/Enhancements',
+                name: 'AP Ammo',
+                points: 5
+            },
+            {
+                equipType: 'Weapon Attachments/Enhancements',
+                name: 'Subsonic Ammo',
+                points: 5
+            },
+            {
+                equipType: 'Combat Gear',
+                name: 'Body Armour',
+                points: 10
+            },
+            {
+                equipType: 'Combat Gear',
+                name: 'Heavy Body Armour',
+                points: 12
+            },
+            {
+                equipType: 'Combat Gear',
+                name: 'Ghillie Suit',
+                points: 5
+            },
+            {
+                equipType: 'Combat Gear',
+                name: 'Night Vision Optics',
+                points: 10
+            },
+            {
+                equipType: 'Combat Gear',
+                name: 'Smart Goggles',
+                points: 12
+            },
+            {
+                equipType: 'Combat Gear',
+                name: 'Thermal Sight',
+                points: 14
+            },
+            {
+                equipType: 'Combat Gear',
+                name: 'Radio Comms',
+                points: 5
+            }
+        ]
     }
 ]

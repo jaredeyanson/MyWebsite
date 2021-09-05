@@ -2,7 +2,7 @@ body {
     background-image: url("MainBackgroundImage.jpeg");
     background-color: white;
     text-align: center;
-    height: 1080px;
+    /* height: 1080px; */
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: center;
@@ -15,12 +15,14 @@ body {
     width: 49%;
     border: 2px solid black;
     /* position: fixed; */
+    opacity: .4;
+    background-image: url("parchment_background.jpg");
     
 }
 
 #leftDiv:hover {
     background-color: gray;
-    opacity: .9;
+    opacity: 1;
     width: 49%;
     position: relative;
 }
@@ -29,12 +31,14 @@ body {
     float: right;
     width: 49%;
     border: 2px solid black; 
+    background-image: url("parchment_background.jpg");
+    opacity: .4;
     /* display: flex;   */
 }
 
 #rightDiv:hover{
-    background-color: gray;
-    opacity: .9;
+    /* background-color: gray; */
+    opacity: 1;
     
 }
 
@@ -78,6 +82,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    /* height: 55px; */
     /* flex: 1 1 1 1 1 1 1 100% */
 }
 
@@ -87,7 +92,7 @@ body {
     margin: 0;
     margin-bottom: 20px;
     width: 13%;
-    height: 60px;
+    height: 70px;
     align-items: center;
 }
 
@@ -108,3 +113,24 @@ body {
     justify-content: space-around;
 }
 
+.wpnStatDiv {
+    margin-top: 20px;
+}
+
+.wpnRulesDiv {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 5px; */
+    /* height: 20px; */
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.wpnData {
+    padding-right: 4px;
+}
+
+.tierButton {
+    margin-bottom: 10px
+}
