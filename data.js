@@ -1204,37 +1204,43 @@ var data = [
             {
                 equipType: 'Weapon Attachments/Enhancements',
                 name: 'Red Dot',
-                points: 3
+                points: 3,
+                spcRules: '+1 to targeting rolls in the first RI'
             },
             {
                 equipType: 'Weapon Attachments/Enhancements',
                 name: 'Laser Sight',
-                points: 3
+                points: 3,
+                spcRules: '+1 targeting roll in the first RI, first 2 RI at night w/ NVG'
             },
             {
                 equipType: 'Weapon Attachments/Enhancements',
                 name: 'Scope',
-                points: 5
+                points: 5,
+                spcRules: '+1 targeting rolls in all but the 1st RI, if model did not move'
             },
             {
                 equipType: 'Weapon Attachments/Enhancements',
                 name: 'Suppressor',
-                points: 5
+                points: 5,
+                spcRules: 'not heard more than one RI away'
             },
             {
                 equipType: 'Weapon Attachments/Enhancements',
                 name: 'Flashlight/Torch',
-                points: 1
+                points: 1,
             },
             {
                 equipType: 'Weapon Attachments/Enhancements',
                 name: 'AP Ammo',
-                points: 5
+                points: 5,
+                spcRules: '+1 penetration to base weapon'
             },
             {
                 equipType: 'Weapon Attachments/Enhancements',
                 name: 'Subsonic Ammo',
-                points: 5
+                points: 5,
+                spcRules: 'models are only alerted with in half 2 RI; Cannot be fired past 3 RI, -2 penetration'
             },
             {
                 equipType: 'Combat Gear',
@@ -1264,7 +1270,8 @@ var data = [
             {
                 equipType: 'Combat Gear',
                 name: 'Thermal Sight',
-                points: 14
+                points: 14,
+                spcRules: 'roll to detect: +1 to results, +2 at night; scan command: +1 to roll; can see through smoke; +1 to targeting roll in all but 1st RI if not moved'
             },
             {
                 equipType: 'Combat Gear',

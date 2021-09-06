@@ -435,7 +435,9 @@ function printArmyList(){
     wpnSpecRuleDiv.className = 'pWpnSpecRuleDiv'
     let equipDiv = document.createElement('div')
     let equipStatTitleDiv = document.createElement('div')
+    equipStatTitleDiv.className = 'pEquipStatTitleDiv'
     let equipStatDiv = document.createElement('div')
+    equipStatDiv.className = 'pEquipStatDiv'
     let equipSpecRuleDiv = document.createElement('div')
     let wpnStatContainer = document.createElement('div')
     wpnStatContainer.className = 'pWpnStatContainer'
@@ -446,42 +448,50 @@ function printArmyList(){
     modelLevel.innerHTML = 'Level: ' + armyList[i].model.level
     let modelPoints = document.createElement ('h3')
     modelPoints.innerHTML = 'Points: ' + armyList[i].model.points
-    let modelStatTitleCd = document.createElement('h3')
+    let modelStatTitleCd = document.createElement('p')
     modelStatTitleCd.innerHTML = 'CD'
-    let modelStatTitleAg = document.createElement('h3')
+    let modelStatTitleAg = document.createElement('p')
     modelStatTitleAg.innerHTML = 'AG'
-    let modelStatTitleSg = document.createElement('h3')
+    let modelStatTitleSg = document.createElement('p')
     modelStatTitleSg.innerHTML = 'SG'
-    let modelStatTitleDc = document.createElement('h3')
+    let modelStatTitleDc = document.createElement('p')
     modelStatTitleDc.innerHTML = 'DC'
-    let modelStatTitleMe = document.createElement('h3')
+    let modelStatTitleMe = document.createElement('p')
     modelStatTitleMe.innerHTML = 'ME'
-    let modelStatCd = document.createElement('h3')
+    let modelStatCd = document.createElement('p')
     modelStatCd.innerHTML = armyList[i].model.stats[0].statValue
-    let modelStatAg = document.createElement('h3')
+    let modelStatAg = document.createElement('p')
     modelStatAg.innerHTML = armyList[i].model.stats[1].statValue
-    let modelStatSg = document.createElement('h3')
+    let modelStatSg = document.createElement('p')
     modelStatSg.innerHTML = armyList[i].model.stats[2].statValue
-    let modelStatDc = document.createElement('h3')
+    let modelStatDc = document.createElement('p')
     modelStatDc.innerHTML = armyList[i].model.stats[3].statValue
-    let modelStatMe = document.createElement('h3')
+    let modelStatMe = document.createElement('p')
     modelStatMe.innerHTML = armyList[i].model.stats[4].statValue
+    let equipType = document.createElement('h3')
+    equipType.innerHTML = 'Type'
+    let equipName = document.createElement('h3')
+    equipName.innerHTML = 'Name'
+    let equipPoint = document.createElement('h3')
+    equipPoint.innerHTML = 'Points'
+    let equipSR = document.createElement('h3')
+    equipSR.innerHTML = 'Special Rules'
 
     for (let h = 0; h < armyList[i].weapons.length; h++){
       let weapons = armyList[i].weapons[h]
-      let wpnName = document.createElement('h3')
+      let wpnName = document.createElement('p')
       wpnName.className = 'pWpnstat'
       wpnName.id = 'pWpnstat1'
-      let wpnPoints = document.createElement('h3')
+      let wpnPoints = document.createElement('p')
       wpnPoints.className = 'pWpnStat'
       wpnPoints.id = 'pWpnstat2'
-      let wpnleth = document.createElement('h3')
+      let wpnleth = document.createElement('p')
       wpnleth.className = 'pWpnStat'
       wpnleth.id = 'pWpnstat3'
-      let wpnRngInt = document.createElement('h3')
+      let wpnRngInt = document.createElement('p')
       wpnRngInt.className = 'pWpnStat'
       wpnRngInt.id = 'pWpnstat4'
-      let wpnPen = document.createElement('h3')
+      let wpnPen = document.createElement('p')
       wpnPen.className = 'pWpnStat'
       wpnPen.id = 'pWpnstat5'
       let wpnSpcRules = document.createElement('div')
@@ -497,8 +507,8 @@ function printArmyList(){
 
       for (let j = 0; j < weapons.specialRules.length; j++){
         let sr = weapons.specialRules[j]
-        let srName =  document.createElement('h4')
-        let srDesc = document.createElement('h4')
+        let srName =  document.createElement('p')
+        let srDesc = document.createElement('p')
 
         srName.innerHTML = sr.name + ': ' + sr.desc
         //srDesc.innerHTML = sr.desc
@@ -506,6 +516,8 @@ function printArmyList(){
         wpnSpcRules.appendChild(srName)
         wpnSpcRules.appendChild(srDesc)
       }
+
+      
 
       wpnStatContainer.appendChild(wpnName)
       wpnStatContainer.appendChild(wpnPoints)
@@ -518,8 +530,31 @@ function printArmyList(){
       wpnDiv.appendChild(wpnStatDiv)
     }
 
+    for (let k = 0; k < armyList[i].equipment.length; k++){
+      let equipment = armyList[i].equipment[k]
+      let eqpName = document.createElement('p')
+      eqpName.innerHTML = equipment.name
+      let eqpPoints = document.createElement('p')
+      eqpPoints.innerHTML = equipment.points
+      let eqpType =document.createElement('p')
+      eqpType.innerHTML = equipment.equipType
+     
+      let equipSR = document.createElement('p')
+      equipSR.innerHTML = equipment.spcRules
+
+      equipStatDiv.appendChild(eqpType)
+      equipStatDiv.appendChild(eqpName)
+      equipStatDiv.appendChild(eqpPoints)
+      equipStatDiv.appendChild(equipSR)
+      //equipSpecRuleDiv.appendChild(equipSR)
+    }
+
     printDiv.id = 'printDiv'
     printDiv.innerHTML = ''
+    equipStatTitleDiv.appendChild(equipType)
+    equipStatTitleDiv.appendChild(equipName)
+    equipStatTitleDiv.appendChild(equipPoint)
+    equipStatTitleDiv.appendChild(equipSR)
     modelStatDiv.appendChild(modelStatCd)
     modelStatDiv.appendChild(modelStatAg)
     modelStatDiv.appendChild(modelStatSg)
@@ -545,14 +580,13 @@ function printArmyList(){
     wpnDiv.appendChild(wpnSpecRuleDiv)
     equipDiv.appendChild(equipStatTitleDiv)
     equipDiv.appendChild(equipStatDiv)
-    equipDiv.appendChild(equipSpecRuleDiv)
+    //equipDiv.appendChild(equipSpecRuleDiv)
     printDiv.appendChild(headerDiv)
     printDiv.appendChild(modelStatsDiv)
     printDiv.appendChild(wpnDiv)
     printDiv.appendChild(equipDiv)
     document.body.appendChild(printDiv)
   }
-
 }
 
 function backBtnFunc(){
