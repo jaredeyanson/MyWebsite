@@ -1272,9 +1272,134 @@ var data = [
                 points: 5
             },
             {
-                equipType: 'NONE',
-                name: 'NONE',
-                points: 0
+                equipType: 'Med Kit',
+                name: 'Battlefield Trauma Kit',
+                points: 5
+            },
+            {
+                equipType: 'Command Kit',
+                name: 'Long Range Comms',
+                points: 15
+            },
+            {
+                equipType: 'Command Kit',
+                name: 'Binos',
+                points: 10
+            },
+            {
+                equipType: 'Command Kit',
+                name: 'Laser Target Designator',
+                points: 10
+            },
+            {
+                equipType: 'Command Kit',
+                name: 'Handheld Integrated Target System',
+                points: 25
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Lockpicks',
+                points: 5
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Breaching Charge',
+                points: 10
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Breaching Tools',
+                points: 5
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Ballistic Shield - Long',
+                points: 10
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Ballistic Shield - Short',
+                points: 5
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Rappelling Kit',
+                points: 5
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Climbing Kit',
+                points: 3
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Tactical Ladder',
+                points: 3
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Tactical Diving Kit',
+                points: 3
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Mine/IED Detector',
+                points: 7
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'EOD Kit',
+                points: 20
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'CBRN-E Detector',
+                points: 5
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'CBRN-E Suit (including Mask)',
+                points: 5
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'CBRN-E Mask Only',
+                points: 3
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'HAZMAT Suit',
+                points: 6
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Personal (mini) C-IED Jammer',
+                points: 10
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Squad Backpack C-IED Jammer',
+                points: 15
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Vehicle Mounted C-IED Jammer',
+                points: 25
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Backpack Comms Jammer',
+                points: 15
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Directional Comms Jammer',
+                points: 20
+            },
+            {
+                equipType: 'Specialist Gear',
+                name: 'Vehicle Mounted Area Comms Jammer',
+                points: 25
             }
         ]
     }

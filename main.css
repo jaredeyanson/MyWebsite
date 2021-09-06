@@ -138,3 +138,58 @@ body {
 #printDiv{
     background-color: gray;
 }
+
+.pHeaderDiv{
+    display: flex;
+}
+
+.pModelNameDiv{
+    width: 85%;
+}
+
+.pHeaderStatDiv{
+    text-align: start;
+}
+
+.pModelStatsDiv{
+    justify-content: space-evenly;
+    margin: auto;
+    text-align: -webkit-center;
+}
+
+.pModelStatTitleDiv{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    border: 1px solid black
+}
+
+.pModelStatDiv{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    border: 1px solid black
+}
+
+.pWpnStatTitleDiv{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.pWpnStatDiv{
+    border:1px solid black
+}
+
+.pWpnStat {
+    
+    margin: 0;
+    padding-top: 50%;
+    align-items: center;
+}
+
+.pWpnStatContainer{
+    display: grid;
+    grid-template-columns: 30% 5% 5% 5% 5% 50%;
+    border: 1px solid black;
+}
