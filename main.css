@@ -134,3 +134,7 @@ body {
 .tierButton {
     margin-bottom: 10px
 }
+
+#printDiv{
+    background-color: gray;
+}

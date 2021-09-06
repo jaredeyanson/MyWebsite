@@ -407,15 +407,81 @@ function printArmyList(){
 
   for (let i = 0; i < armyList.length; i++){
     let printDiv = document.createElement('div')
-    let modelDiv = document.createElement('div')
+    let headerDiv = document.createElement('div')
+    let modelNameDiv = document.createElement('div')
+    let levelDiv = document.createElement('div')
+    let pointDiv = document.createElement('div')
+    let totPointDiv = document.createElement('div')
+    let modelStatsDiv = document.createElement('div')
+    let modelStatTitleDiv = document.createElement('div')
+    let modelStatDiv = document.createElement('div')
+    let wpnDiv = document.createElement('div')
+    let wpnStatTitleDiv = document.createElement('div')
+    let wpnStatDiv = document.createElement('div')
+    let wpnSpecRuleDiv = document.createElement('div')
+    let equipDiv = document.createElement('div')
+    let equipStatTitleDiv = document.createElement('div')
+    let equipStatDiv = document.createElement('div')
+    let equipSpecRuleDiv = document.createElement('div')
+
     let modelName = document.createElement('h1')
+    modelName.innerHTML = armyList[i].model.modelName
+    let modelLevel = document.createElement('h3')
+    modelLevel.innerHTML = 'Level: ' + armyList[i].model.level
+    let modelPoints = document.createElement ('h3')
+    modelPoints.innerHTML = 'Points: ' + armyList[i].model.points
+    let modelStatTitleCd = document.createElement('h3')
+    modelStatTitleCd.innerHTML = 'CD'
+    let modelStatTitleAg = document.createElement('h3')
+    modelStatTitleAg.innerHTML = 'AG'
+    let modelStatTitleSg = document.createElement('h3')
+    modelStatTitleSg.innerHTML = 'SG'
+    let modelStatTitleDc = document.createElement('h3')
+    modelStatTitleDc.innerHTML = 'DC'
+    let modelStatTitleMe = document.createElement('h3')
+    modelStatTitleMe.innerHTML = 'ME'
+    let modelStatCd = document.createElement('h3')
+    modelStatCd.innerHTML = armyList[i].model.stats[0].statValue
+    let modelStatAg = document.createElement('h3')
+    modelStatAg.innerHTML = armyList[i].model.stats[1].statValue
+    let modelStatSg = document.createElement('h3')
+    modelStatSg.innerHTML = armyList[i].model.stats[2].statValue
+    let modelStatDc = document.createElement('h3')
+    modelStatDc.innerHTML = armyList[i].model.stats[3].statValue
+    let modelStatMe = document.createElement('h3')
+    modelStatMe.innerHTML = armyList[i].model.stats[4].statValue
 
     printDiv.id = 'printDiv'
     printDiv.innerHTML = ''
-    modelName.innerHTML = armyList[i].model.modelName
-
-    modelDiv.appendChild(modelName)
-    printDiv.appendChild(modelDiv)
+    modelStatDiv.appendChild(modelStatCd)
+    modelStatDiv.appendChild(modelStatAg)
+    modelStatDiv.appendChild(modelStatSg)
+    modelStatDiv.appendChild(modelStatDc)
+    modelStatDiv.appendChild(modelStatMe)
+    modelNameDiv.appendChild(modelName)
+    levelDiv.appendChild(modelLevel)
+    pointDiv.appendChild(modelPoints)
+    headerDiv.appendChild(modelNameDiv)
+    headerDiv.appendChild(levelDiv)
+    headerDiv.appendChild(pointDiv)
+    headerDiv.appendChild(totPointDiv)
+    modelStatTitleDiv.appendChild(modelStatTitleCd)
+    modelStatTitleDiv.appendChild(modelStatTitleAg)
+    modelStatTitleDiv.appendChild(modelStatTitleSg)
+    modelStatTitleDiv.appendChild(modelStatTitleDc)
+    modelStatTitleDiv.appendChild(modelStatTitleMe)
+    modelStatsDiv.appendChild(modelStatTitleDiv)
+    modelStatsDiv.appendChild(modelStatDiv)
+    wpnDiv.appendChild(wpnStatTitleDiv)
+    wpnDiv.appendChild(wpnStatDiv)
+    wpnDiv.appendChild(wpnSpecRuleDiv)
+    equipDiv.appendChild(equipStatTitleDiv)
+    equipDiv.appendChild(equipStatDiv)
+    equipDiv.appendChild(equipSpecRuleDiv)
+    printDiv.appendChild(headerDiv)
+    printDiv.appendChild(modelStatsDiv)
+    printDiv.appendChild(wpnDiv)
+    printDiv.appendChild(equipDiv)
     document.body.appendChild(printDiv)
   }
 
